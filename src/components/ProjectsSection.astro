@@ -1,54 +1,5 @@
 ---
-const projects = [
-  {
-    id: "projects.kostapp",
-    num: "01",
-    label: "Property",
-    title: "E-Commerce KostApp",
-    description:
-      "Sebuah Apps berbasis app full system integration dengan laravel khusus penjualan property (Kost Apartement atau hotel) yang bekerja sama dengan PT Multi Raksa Tribata",
-    tags: ["Laravel", "E-Commerce", "Property"],
-    image: "/kostapp.png",
-    liveUrl: "https://sleepbill.my.id",
-    githubUrl: "#",
-  },
-  {
-    id: "projects.edufo",
-    num: "02",
-    label: "Education",
-    title: "Edufo CRM",
-    description: "sebuah crm untuk pemesanan Aplikasi pendidikan with label",
-    tags: ["CRM", "Education", "Laravel"],
-    image: "/edufo.png",
-    liveUrl: "https://edufo.id",
-    githubUrl: "#",
-  },
-  {
-    id: "projects.siakad",
-    num: "03",
-    label: "Academic",
-    title: "Siakad SMK Nurul Islam",
-    description:
-      "sebuah sistem akademik lengkap dengan 4 pilar yaitu Siakad Tracer Study, Siakad PKL, Siakad Inventaris dan Siakad Jobseeker untuk SMK Nurul Islam Jakarta Full Integration Web Apps Laravel and python",
-    tags: ["Laravel", "Python", "SIAKAD"],
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?auto=format&fit=crop&q=80&w=1000",
-    liveUrl: "https://siakad.ecotrace.site",
-    githubUrl: "#",
-  },
-  {
-    id: "projects.kasis",
-    num: "04",
-    label: "Management",
-    title: "Kasis App",
-    description:
-      "Sebuah Aplikasi Multiplatform (Windows, Android dan Web) pencatatan Manajemen kas dan pencatatan pelanggaran bekerja sama dengan OSIS SMK Nurul Islam Jakarta dibuat full integration web dengan mobile apps dengan teknologi flutter",
-    tags: ["Flutter", "Cross-Platform", "Management"],
-    image: "/kasis.png",
-    liveUrl: "https://kasis.ecotrace.site",
-    githubUrl: "#",
-  },
-];
+import { projects } from "../data/projects";
 ---
 
 <section
@@ -58,11 +9,11 @@ const projects = [
   {/* Abstract Background */}
   <div class="absolute inset-0 pointer-events-none opacity-20">
     <div
-      class="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-blue-600/20 rounded-full blur-[120px]"
+      class="absolute top-[10%] left-[20%] w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.2)_0%,transparent_70%)] rounded-full will-change-transform"
     >
     </div>
     <div
-      class="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] bg-cyan-500/10 rounded-full blur-[120px]"
+      class="absolute bottom-[10%] right-[20%] w-[500px] h-[500px] bg-[radial-gradient(circle_at_center,rgba(6,182,212,0.1)_0%,transparent_70%)] rounded-full will-change-transform"
     >
     </div>
   </div>
@@ -131,11 +82,8 @@ const projects = [
                   {project.title}
                 </h3>
 
-                <p
-                  class="text-gray-300 text-lg mb-8 line-clamp-2"
-                  data-i18n={`${project.id}.desc`}
-                >
-                  {project.description}
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed flex-grow">
+                  {project.descriptionId || project.description}
                 </p>
 
                 <div class="flex flex-wrap gap-3 mb-8">
@@ -146,10 +94,10 @@ const projects = [
                   ))}
                 </div>
 
-                <div class="flex gap-4">
+                <div class="flex items-center gap-4 mt-auto pt-6 border-t border-white/5">
                   <a
-                    href={project.liveUrl}
-                    class="px-8 py-4 bg-white text-black font-bold rounded-xl hover:bg-blue-400 hover:text-white transition-colors duration-300"
+                    href="/projects"
+                    class="flex-1 text-center py-3 px-6 rounded-xl bg-white/5 hover:bg-white hover:text-black font-semibold text-white transition-all duration-300"
                   >
                     View Project
                   </a>
@@ -162,6 +110,18 @@ const projects = [
           </div>
         ))
       }
+    </div>
+
+    {/* View All Projects Button */}
+    <div class="text-center mt-12 animate-fade-in-up">
+      <a
+        href="/projects"
+        class="group inline-flex items-center gap-3 px-8 py-4 bg-white/[0.06] border border-white/10 text-white rounded-2xl font-bold hover:bg-white hover:text-black hover:border-white transition-all duration-500 transform hover:-translate-y-1 hover:shadow-xl hover:shadow-white/10"
+        data-i18n-text="projects.more"
+      >
+        <span>View All Projects</span>
+        <i class="fas fa-arrow-right text-sm group-hover:translate-x-2 transition-transform duration-300"></i>
+      </a>
     </div>
   </div>
 </section>

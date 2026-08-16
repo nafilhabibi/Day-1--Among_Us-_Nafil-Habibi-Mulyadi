@@ -5,33 +5,26 @@
 >
     <nav class="flex justify-center items-center gap-3 px-4">
         <div
-            class="flex items-center gap-2 bg-white/80 backdrop-blur-xl rounded-lg px-4 py-2.5 shadow-lg border border-white/20 transition-all duration-300"
+            class="flex items-center gap-3 bg-gray-950/90 backdrop-blur-xl rounded-xl px-4 py-2 shadow-2xl border border-gray-800 transition-all duration-300"
             id="nav-container"
         >
-            {/* Logo with Animation */}
+            {/* Logo */}
             <a
                 href="#home"
-                class="flex items-center space-x-3 group relative z-10"
+                class="flex items-center space-x-2.5 group relative z-10 font-mono"
             >
-                <div
-                    class="h-8 w-1 bg-blue-400 rounded-full group-hover:h-10 transition-all duration-300"
-                >
-                </div>
+                <span class="text-blue-500 font-bold text-sm">//</span>
 
                 <div class="flex flex-col justify-center">
                     <span
-                        class="text-lg font-extrabold text-slate-900 leading-none tracking-tighter group-hover:text-blue-600 transition-colors duration-300"
+                        class="text-sm md:text-base font-extrabold text-white leading-none tracking-tight group-hover:text-blue-400 transition-colors duration-300"
                     >
-                        Nafil<span
-                            class="text-blue-600 group-hover:text-slate-900 transition-colors duration-300"
-                        >
-                            .
-                        </span>Habibi
+                        Nafil<span class="text-blue-400">.</span>Habibi
                     </span>
                     <span
-                        class="text-[9px] text-slate-400 font-bold tracking-[0.2em] uppercase mt-1 leading-none"
+                        class="text-[9px] text-gray-400 font-mono tracking-widest uppercase mt-1 leading-none"
                     >
-                        Fullstack Engineer
+                        System Analyst
                     </span>
                 </div>
             </a>
@@ -40,115 +33,90 @@
             <div class="hidden md:flex items-center gap-1">
                 <a
                     href="#home"
-                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                    class="nav-link px-3.5 py-1.5 text-xs font-mono text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                    data-i18n="nav.home"
                 >
-                    <span class="relative z-10">Home</span>
-                    <div
-                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
-                    >
-                    </div>
+                    Home
                 </a>
                 <a
                     href="#about"
-                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                    class="nav-link px-3.5 py-1.5 text-xs font-mono text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                    data-i18n="nav.about"
                 >
-                    <span class="relative z-10">About</span>
-                    <div
-                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
-                    >
-                    </div>
+                    About
                 </a>
                 <a
                     href="#projects"
-                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                    class="nav-link px-3.5 py-1.5 text-xs font-mono text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                    data-i18n="nav.projects"
                 >
-                    <span class="relative z-10">Projects</span>
-                    <div
-                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
-                    >
-                    </div>
+                    Projects
                 </a>
                 <a
                     href="#skills"
-                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                    class="nav-link px-3.5 py-1.5 text-xs font-mono text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                    data-i18n="nav.skills"
                 >
-                    <span class="relative z-10">Skills</span>
-                    <div
-                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
-                    >
-                    </div>
+                    Skills
                 </a>
                 <a
                     href="#contact"
-                    class="nav-link px-4 py-2 text-sm text-gray-700 hover:text-blue-primary font-semibold rounded-lg hover:bg-blue-light/50 transition-all duration-300 relative group"
+                    class="nav-link px-3.5 py-1.5 text-xs font-mono text-gray-300 hover:text-white hover:bg-white/10 rounded-lg transition-all duration-200"
+                    data-i18n="nav.contact"
                 >
-                    <span class="relative z-10">Contact</span>
-                    <div
-                        class="absolute bottom-1 left-1/2 -translate-x-1/2 w-0 h-1 bg-gradient-to-r from-blue-primary to-blue-secondary rounded-full group-hover:w-8 transition-all duration-300"
-                    >
-                    </div>
+                    Contact
                 </a>
 
-                {/* Language Switcher */}
-
-                {/* Divider - Hidden on smaller screens */}
-                <div class="w-px h-6 bg-gray-300 mx-1"></div>
+                {/* Divider */}
+                <div class="w-px h-5 bg-gray-800 mx-1.5"></div>
 
                 {/* CTA Button */}
                 <a
                     href="#contact"
-                    class="group relative px-5 py-2 text-sm bg-blue-primary text-white font-bold rounded-lg overflow-hidden shadow-md shadow-blue-900/10 hover:bg-blue-secondary transition-all duration-300 hover:-translate-y-0.5"
+                    class="group relative px-4 py-1.5 text-xs font-mono font-semibold bg-blue-600 hover:bg-blue-500 text-white rounded-lg border border-blue-400/30 shadow-md shadow-blue-900/30 transition-all duration-200 inline-flex items-center gap-1.5"
+                    data-i18n="nav.hire"
                 >
-                    <span class="relative z-10 flex items-center gap-2">
-                        Hire Me
-                        <i
-                            class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"
-                        ></i>
-                    </span>
-                    {/* Shine effect */}
-                    <div
-                        class="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-700 bg-gradient-to-r from-transparent via-white/30 to-transparent"
-                    >
-                    </div>
+                    <span>Hire Me</span>
+                    <i
+                        class="fas fa-arrow-right text-[10px] group-hover:translate-x-0.5 transition-transform"
+                    ></i>
                 </a>
             </div>
 
             {/* Mobile Menu Button */}
             <button
                 id="mobile-menu-button"
-                class="md:hidden relative w-10 h-10 rounded-full bg-white shadow-md border border-blue-100 hover:bg-blue-50 transition-all duration-300 flex items-center justify-center group z-[70]"
+                class="md:hidden relative w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 hover:bg-gray-800 transition-all duration-200 flex items-center justify-center group z-[70]"
             >
-                <div class="relative w-5 h-4 flex flex-col justify-between">
+                <div class="relative w-4 h-3.5 flex flex-col justify-between">
                     <span
-                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                        class="hamburger-line w-full h-0.5 bg-gray-200 rounded-full transition-all duration-300"
                     ></span>
                     <span
-                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                        class="hamburger-line w-full h-0.5 bg-gray-200 rounded-full transition-all duration-300"
                     ></span>
                     <span
-                        class="hamburger-line w-full h-0.5 bg-blue-primary rounded-full transition-all duration-300"
+                        class="hamburger-line w-full h-0.5 bg-gray-200 rounded-full transition-all duration-300"
                     ></span>
                 </div>
             </button>
         </div>
 
-        {
-            /* Language Switcher - Separate Floating Box (Visible on all screens) */
-        }
+        {/* Language Switcher */}
         <div
-            class="flex items-center bg-white/80 backdrop-blur-xl rounded-lg p-1.5 shadow-lg border border-white/20 transition-all duration-300"
+            class="flex items-center bg-gray-950/90 backdrop-blur-xl rounded-xl p-1 shadow-2xl border border-gray-800 transition-all duration-300"
             id="lang-container"
         >
             <button
                 id="lang-en"
-                class="px-3 py-1.5 text-[10px] font-black rounded-md transition-all duration-300 lang-btn active"
+                class="px-2.5 py-1 text-[10px] font-mono font-bold rounded-lg transition-all duration-200 lang-btn active"
                 data-lang="en"
             >
                 EN
             </button>
             <button
                 id="lang-id"
-                class="px-3 py-1.5 text-[10px] font-black rounded-md transition-all duration-300 lang-btn"
+                class="px-2.5 py-1 text-[10px] font-mono font-bold rounded-lg transition-all duration-200 lang-btn"
                 data-lang="id"
             >
                 ID
@@ -158,196 +126,100 @@
         {/* Mobile Navigation - Sidebar */}
         <div
             id="mobile-menu"
-            class="fixed top-0 right-0 h-screen w-[85%] max-w-sm bg-white shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out md:hidden z-[60] border-l border-blue-50"
+            class="fixed top-0 right-0 h-screen w-[85%] max-w-sm bg-gray-950 shadow-2xl transform translate-x-full transition-transform duration-500 ease-in-out md:hidden z-[60] border-l border-gray-800 text-white"
         >
             {/* Mobile Menu Header */}
             <div
-                class="flex items-center justify-between p-6 border-b border-gray-200"
+                class="flex items-center justify-between p-6 border-b border-gray-800"
             >
                 <div class="flex items-center space-x-3">
                     <div
-                        class="w-10 h-10 rounded-xl bg-blue-primary flex items-center justify-center shadow-lg shadow-blue-900/10"
+                        class="w-10 h-10 rounded-xl bg-blue-600 flex items-center justify-center font-mono font-bold text-white shadow-lg"
                     >
-                        <span class="text-white font-black text-lg">N</span>
+                        N
                     </div>
                     <div>
-                        <div class="text-lg font-black text-dark">
+                        <div class="text-base font-bold text-white">
                             Nafil Habibi
                         </div>
-                        <div class="text-xs text-gray-400 font-semibold">
-                            DEVELOPER
+                        <div class="text-xs text-gray-400 font-mono tracking-wider">
+                            SYSTEM ANALYST
                         </div>
                     </div>
                 </div>
                 <button
                     id="mobile-menu-close"
-                    class="w-10 h-10 rounded-lg bg-gray-100 hover:bg-gray-200 transition-colors flex items-center justify-center"
+                    class="w-9 h-9 rounded-lg bg-gray-900 border border-gray-800 hover:bg-gray-800 transition-colors flex items-center justify-center text-gray-300"
                 >
-                    <i class="fas fa-times text-gray-600 text-xl"></i>
+                    <i class="fas fa-times text-base"></i>
                 </button>
             </div>
-
-            {/* Mobile Language Switcher - Removed (Moved to header) */}
 
             {/* Mobile Menu Links */}
             <div class="flex flex-col p-6 space-y-2">
                 <a
                     href="#home"
-                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                    class="mobile-nav-link group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-900 border border-transparent hover:border-gray-800 transition-all font-mono text-sm"
                 >
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
-                        >
-                            <i
-                                class="fas fa-home text-blue-primary group-hover:text-white transition-colors"
-                            ></i>
-                        </div>
-                        <span
-                            class="font-bold text-gray-700 group-hover:text-blue-primary"
-                            >Home</span
-                        >
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-home text-blue-400"></i>
+                        <span class="text-gray-200 group-hover:text-white" data-i18n="nav.home">Home</span>
                     </div>
-                    <i
-                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
-                    ></i>
+                    <i class="fas fa-chevron-right text-gray-600 text-xs group-hover:text-white transition-all"></i>
                 </a>
 
                 <a
                     href="#about"
-                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                    class="mobile-nav-link group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-900 border border-transparent hover:border-gray-800 transition-all font-mono text-sm"
                 >
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
-                        >
-                            <i
-                                class="fas fa-user text-blue-primary group-hover:text-white transition-colors"
-                            ></i>
-                        </div>
-                        <span
-                            class="font-bold text-gray-700 group-hover:text-blue-primary"
-                            >About</span
-                        >
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-user text-blue-400"></i>
+                        <span class="text-gray-200 group-hover:text-white" data-i18n="nav.about">About</span>
                     </div>
-                    <i
-                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
-                    ></i>
+                    <i class="fas fa-chevron-right text-gray-600 text-xs group-hover:text-white transition-all"></i>
                 </a>
 
                 <a
                     href="#projects"
-                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                    class="mobile-nav-link group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-900 border border-transparent hover:border-gray-800 transition-all font-mono text-sm"
                 >
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
-                        >
-                            <i
-                                class="fas fa-briefcase text-blue-primary group-hover:text-white transition-colors"
-                            ></i>
-                        </div>
-                        <span
-                            class="font-bold text-gray-700 group-hover:text-blue-primary"
-                            >Projects</span
-                        >
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-briefcase text-blue-400"></i>
+                        <span class="text-gray-200 group-hover:text-white" data-i18n="nav.projects">Projects</span>
                     </div>
-                    <i
-                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
-                    ></i>
+                    <i class="fas fa-chevron-right text-gray-600 text-xs group-hover:text-white transition-all"></i>
                 </a>
 
                 <a
                     href="#skills"
-                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                    class="mobile-nav-link group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-900 border border-transparent hover:border-gray-800 transition-all font-mono text-sm"
                 >
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
-                        >
-                            <i
-                                class="fas fa-code text-blue-primary group-hover:text-white transition-colors"
-                            ></i>
-                        </div>
-                        <span
-                            class="font-bold text-gray-700 group-hover:text-blue-primary"
-                            >Skills</span
-                        >
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-code text-blue-400"></i>
+                        <span class="text-gray-200 group-hover:text-white" data-i18n="nav.skills">Skills</span>
                     </div>
-                    <i
-                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
-                    ></i>
+                    <i class="fas fa-chevron-right text-gray-600 text-xs group-hover:text-white transition-all"></i>
                 </a>
 
                 <a
                     href="#contact"
-                    class="mobile-nav-link group flex items-center justify-between px-5 py-4 rounded-xl hover:bg-blue-light/50 transition-all duration-300"
+                    class="mobile-nav-link group flex items-center justify-between px-4 py-3 rounded-xl hover:bg-gray-900 border border-transparent hover:border-gray-800 transition-all font-mono text-sm"
                 >
-                    <div class="flex items-center gap-4">
-                        <div
-                            class="w-10 h-10 rounded-lg bg-blue-light flex items-center justify-center group-hover:bg-blue-primary transition-colors"
-                        >
-                            <i
-                                class="fas fa-envelope text-blue-primary group-hover:text-white transition-colors"
-                            ></i>
-                        </div>
-                        <span
-                            class="font-bold text-gray-700 group-hover:text-blue-primary"
-                            >Contact</span
-                        >
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-envelope text-blue-400"></i>
+                        <span class="text-gray-200 group-hover:text-white" data-i18n="nav.contact">Contact</span>
                     </div>
-                    <i
-                        class="fas fa-chevron-right text-gray-400 group-hover:text-blue-primary group-hover:translate-x-1 transition-all"
-                    ></i>
+                    <i class="fas fa-chevron-right text-gray-600 text-xs group-hover:text-white transition-all"></i>
                 </a>
 
                 <div class="pt-4">
                     <a
                         href="#contact"
-                        class="flex items-center justify-center gap-2 w-full px-6 py-4 bg-blue-primary text-white font-bold rounded-xl shadow-lg shadow-blue-900/20 hover:bg-blue-secondary transition-all duration-300"
+                        class="flex items-center justify-center gap-2 w-full px-5 py-3.5 bg-blue-600 hover:bg-blue-500 text-white font-mono font-bold rounded-xl shadow-lg border border-blue-400/30 transition-all"
+                        data-i18n="nav.hire"
                     >
-                        <span>Let's Work Together</span>
-                        <i class="fas fa-arrow-right"></i>
-                    </a>
-                </div>
-            </div>
-
-            {/* Mobile Menu Footer */}
-            <div
-                class="absolute bottom-0 left-0 right-0 p-6 border-t border-gray-200"
-            >
-                <div class="flex justify-center gap-4">
-                    <a
-                        href="#"
-                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
-                    >
-                        <i
-                            class="fab fa-github text-blue-primary group-hover:text-white transition-colors"
-                        ></i>
-                    </a>
-                    <a
-                        href="#"
-                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
-                    >
-                        <i
-                            class="fab fa-linkedin text-blue-primary group-hover:text-white transition-colors"
-                        ></i>
-                    </a>
-                    <a
-                        href="#"
-                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
-                    >
-                        <i
-                            class="fab fa-twitter text-blue-primary group-hover:text-white transition-colors"
-                        ></i>
-                    </a>
-                    <a
-                        href="#"
-                        class="w-10 h-10 rounded-lg bg-blue-light hover:bg-blue-primary flex items-center justify-center transition-colors group"
-                    >
-                        <i
-                            class="fab fa-instagram text-blue-primary group-hover:text-white transition-colors"
-                        ></i>
+                        <span>Hire Me</span>
+                        <i class="fas fa-arrow-right text-xs"></i>
                     </a>
                 </div>
             </div>
@@ -356,7 +228,7 @@
         {/* Mobile Menu Overlay */}
         <div
             id="mobile-menu-overlay"
-            class="fixed inset-0 bg-dark/60 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-[55]"
+            class="fixed inset-0 bg-black/70 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300 md:hidden z-[55]"
         >
         </div>
     </nav>
@@ -370,32 +242,12 @@
 
     .navbar-scrolled #nav-container,
     .navbar-scrolled #lang-container {
-        @apply shadow-xl shadow-blue-primary/10;
-        background-color: rgba(255, 255, 255, 0.95);
-    }
-
-    .navbar-scrolled #nav-container {
-        @apply py-2 px-3;
-    }
-
-    @supports (backdrop-filter: blur(1px)) {
-        .navbar-scrolled #nav-container,
-        .navbar-scrolled #lang-container {
-            backdrop-filter: blur(10px);
-        }
-        /* Reduce blur on mobile for performance */
-        @media (max-width: 768px) {
-            .navbar-scrolled #nav-container,
-            .navbar-scrolled #lang-container {
-                backdrop-filter: blur(5px);
-                background-color: rgba(255, 255, 255, 0.98);
-            }
-        }
+        @apply shadow-2xl border-gray-700 bg-gray-950/95;
     }
 
     /* Active link indicator */
     .nav-link.active {
-        @apply text-blue-primary bg-blue-light/50;
+        @apply text-white bg-white/10 border border-white/15;
     }
 
     /* Mobile menu animations */
@@ -409,7 +261,7 @@
 
     /* Hamburger animation */
     #mobile-menu-button.active .hamburger-line:nth-child(1) {
-        @apply rotate-45 translate-y-2;
+        @apply rotate-45 translate-y-1.5;
     }
 
     #mobile-menu-button.active .hamburger-line:nth-child(2) {
@@ -417,18 +269,18 @@
     }
 
     #mobile-menu-button.active .hamburger-line:nth-child(3) {
-        @apply -rotate-45 -translate-y-2;
+        @apply -rotate-45 -translate-y-1.5;
     }
 
     /* Language Switcher Styles */
     .lang-btn.active,
     .lang-btn-mobile.active {
-        @apply bg-blue-primary text-white shadow-sm;
+        @apply bg-blue-600 text-white shadow-sm font-mono;
     }
 
     .lang-btn:not(.active),
     .lang-btn-mobile:not(.active) {
-        @apply text-gray-400 hover:text-blue-primary;
+        @apply text-gray-400 hover:text-white font-mono;
     }
 </style>
 
@@ -566,8 +418,8 @@
                 "A CRM for educational application orders with multi-label support",
             "projects.siakad.desc":
                 "A comprehensive academic system with 4 pillars: Tracer Study, Internship, Inventory, and Jobseeker for SMK Nurul Islam Jakarta",
-            "projects.kasis.desc":
-                "A multiplatform app (Windows, Android, Web) for cash management and violation tracking built with Flutter and Laravel",
+            "projects.hydrotect.desc":
+                "A realtime IoT-based hydrometeorological monitoring system powered by Artificial Intelligence for predictive weather analysis, early disaster detection, and environmental data visualization",
             "projects.more": "View All Projects",
             "contact.title":
                 "Let's craft <br />something <span class='text-accent underline decoration-green-primary/40 underline-offset-8'>epic</span>",
@@ -580,7 +432,7 @@
             "contact.msg": "Your Message",
             "contact.btn": "Shoot Message",
             "hero.status": "Available for new projects",
-            "hero.role": "Fullstack <span class='text-black'>Engineer</span>",
+            "hero.role": "System <span class='text-black'>Analyst</span>",
             "hero.desc":
                 "I architect high-performance digital solutions by bridging the gap between innovative design and scalable engineering.",
             "hero.portfolio": "View Portfolio",
@@ -594,7 +446,7 @@
             "about.tabs.skills": "Skills",
             "about.tabs.experience": "Experience",
             "about.tabs.education": "Education",
-            "about.exp.1.role": "Fullstack Engineer",
+            "about.exp.1.role": "System Analyst",
             "about.exp.2.role": "AI Annotator",
             "about.exp.3.role": "Junior Developer",
             "about.edu.1.degree": "Software Engineering",
@@ -628,8 +480,8 @@
                 "Sebuah CRM untuk pemesanan Aplikasi pendidikan dengan model label",
             "projects.siakad.desc":
                 "Sistem akademik lengkap dengan 4 pilar: Siakad Tracer Study, Siakad PKL, Siakad Inventaris dan Siakad Jobseeker untuk SMK Nurul Islam Jakarta",
-            "projects.kasis.desc":
-                "Aplikasi Multiplatform (Windows, Android dan Web) pencatatan Manajemen kas dan pelanggaran bekerja sama dengan OSIS SMK Nurul Islam Jakarta",
+            "projects.hydrotect.desc":
+                "Sistem IoT pemantauan kondisi hidrometeorologi secara realtime yang dilengkapi dengan Artificial Intelligence untuk analisis prediktif cuaca, deteksi dini bencana, dan visualisasi data lingkungan berbasis web dashboard",
             "projects.more": "Lihat Semua Proyek",
             "contact.title":
                 "Mari ciptakan <br />sesuatu yang <span class='text-accent underline decoration-green-primary/40 underline-offset-8'>epik</span>",
@@ -642,7 +494,7 @@
             "contact.msg": "Pesan Anda",
             "contact.btn": "Kirim Pesan",
             "hero.status": "Tersedia untuk proyek baru",
-            "hero.role": "Fullstack <span class='text-black'>Engineer</span>",
+            "hero.role": "System <span class='text-black'>Analyst</span>",
             "hero.desc":
                 "Saya merancang solusi digital berkinerja tinggi dengan menjembatani kesenjangan antara desain inovatif dan struktur teknik yang skalabel.",
             "hero.portfolio": "Lihat Portofolio",
@@ -656,7 +508,7 @@
             "about.tabs.skills": "Keahlian",
             "about.tabs.experience": "Pengalaman",
             "about.tabs.education": "Pendidikan",
-            "about.exp.1.role": "Fullstack Engineer",
+            "about.exp.1.role": "System Analyst",
             "about.exp.2.role": "AI Annotator",
             "about.exp.3.role": "Pengembang Junior",
             "about.edu.1.degree": "Rekayasa Perangkat Lunak",

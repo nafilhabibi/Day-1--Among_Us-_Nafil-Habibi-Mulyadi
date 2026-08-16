@@ -1,5 +1,6 @@
 ---
 import Header from "../components/Header.astro";
+const { darkFooter = false, hideHeader = false, isDark = false } = Astro.props;
 ---
 
 <!doctype html>
@@ -8,22 +9,22 @@ import Header from "../components/Header.astro";
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>
-      {Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer
+      {Astro.props.title} | Nafil Habibi Mulyadi - System Analyst
     </title>
 
     <!-- Primary Meta Tags -->
     <meta
       name="title"
-      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - System Analyst`}
     />
     <meta
       name="description"
-      content="Portfolio of Nafil Habibi Mulyadi, a Fullstack Engineer specializing in high-performance digital solutions, web apps, and mobile development with Laravel, Python, and Flutter."
+      content="Portfolio of Nafil Habibi Mulyadi, a System Analyst specializing in high-performance digital solutions, web apps, and mobile development with Laravel, Python, and Flutter."
     />
     <meta name="author" content="Nafil Habibi Mulyadi" />
     <meta
       name="keywords"
-      content="Nafil Habibi, Fullstack Engineer, Web Developer, Laravel Expert, Flutter Developer, SMK Nurul Islam Jakarta, KostApp, Kasis App, Edufo CRM"
+      content="Nafil Habibi, System Analyst, Web Developer, Laravel Expert, Flutter Developer, SMK Nurul Islam Jakarta, KostApp, Hydrotect Earth Guard, Edufo CRM"
     />
 
     <!-- Open Graph / Facebook -->
@@ -32,7 +33,7 @@ import Header from "../components/Header.astro";
     <!-- Replace with actual domain -->
     <meta
       property="og:title"
-      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - System Analyst`}
     />
     <meta
       property="og:description"
@@ -48,7 +49,7 @@ import Header from "../components/Header.astro";
     <meta property="twitter:url" content="https://nafilhabibi.vercel.app/" />
     <meta
       property="twitter:title"
-      content={`${Astro.props.title} | Nafil Habibi Mulyadi - Fullstack Engineer`}
+      content={`${Astro.props.title} | Nafil Habibi Mulyadi - System Analyst`}
     />
     <meta
       property="twitter:description"
@@ -82,9 +83,9 @@ import Header from "../components/Header.astro";
   </head>
 
   <body
-    class="font-inter text-gray-text bg-light min-h-screen overflow-x-hidden"
+    class={`font-inter text-gray-text min-h-screen overflow-x-hidden ${isDark ? "bg-[#050505]" : "bg-light"}`}
   >
-    <Header />
+    {!hideHeader && <Header />}
 
     <!-- Main Content -->
     <main class="relative">
@@ -92,7 +93,9 @@ import Header from "../components/Header.astro";
     </main>
 
     <!-- Footer -->
-    <footer class="py-12 bg-white border-t border-gray-200 mt-20">
+    <footer
+      class={`py-12 ${darkFooter ? "bg-[#050505] border-t border-white/10 text-white" : "bg-white border-t border-gray-200"} mt-0`}
+    >
       <div class="container mx-auto px-4">
         <div
           class="flex flex-col md:flex-row justify-between items-center gap-8"
@@ -105,7 +108,7 @@ import Header from "../components/Header.astro";
               Nafil Habibi Mulyadi
             </h3>
             <p class="text-gray-500 mt-2 text-sm">
-              Creative Developer & Designer
+              System Analyst and IoT & AI Enthusiast
             </p>
           </div>
 
@@ -129,15 +132,7 @@ import Header from "../components/Header.astro";
             >
               <i class="fab fa-github text-xl"></i>
             </a>
-            <a
-              href="https://twitter.com"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-gray-400 hover:text-blue-400 transition-colors duration-300 hover:scale-110 transform"
-              aria-label="Twitter"
-            >
-              <i class="fab fa-twitter text-xl"></i>
-            </a>
+
             <a
               href="https://www.instagram.com/nafiliator_"
               target="_blank"
@@ -159,7 +154,7 @@ import Header from "../components/Header.astro";
         <div class="mt-8 pt-8 border-t border-gray-100 text-center">
           <p class="text-gray-500 text-sm">
             Made by Nafil Habibi Mulyadi <i
-              class="fas fa-copyright text-red-400 mx-1"></i> and with lots of tea
+              class="fas fa-copyright text-gray-400 mx-1"></i> and with lots of tea
           </p>
         </div>
       </div>
@@ -195,43 +190,56 @@ import Header from "../components/Header.astro";
         });
       });
 
-      // Navbar scroll effect
+      // Consolidated and optimized scroll listener
       const header = document.querySelector("header");
-      if (header) {
-        window.addEventListener("scroll", function () {
-          if (window.scrollY > 100) {
-            header.classList.add(
-              "bg-white/90",
-              "backdrop-blur-md",
-              "shadow-sm",
-              "border-b",
-              "border-gray-100",
-            );
-          } else {
-            header.classList.remove(
-              "bg-white/90",
-              "backdrop-blur-md",
-              "shadow-sm",
-              "border-b",
-              "border-gray-100",
-            );
-          }
-        });
-      }
-
-      // Back to Top Button
       const backToTopBtn = document.getElementById("backToTop");
-      if (backToTopBtn) {
-        window.addEventListener("scroll", () => {
-          if (window.scrollY > 300) {
-            backToTopBtn.classList.remove("translate-y-20", "opacity-0");
-            backToTopBtn.classList.add("translate-y-0", "opacity-100");
-          } else {
-            backToTopBtn.classList.remove("translate-y-0", "opacity-100");
-            backToTopBtn.classList.add("translate-y-20", "opacity-0");
-          }
-        });
+      let isScrolling = false;
 
+      window.addEventListener(
+        "scroll",
+        () => {
+          if (!isScrolling) {
+            window.requestAnimationFrame(() => {
+              const scrollY = window.scrollY;
+
+              // Navbar logic is handled by Header.astro
+
+              // Back to Top logic
+              if (backToTopBtn) {
+                if (scrollY > 300) {
+                  backToTopBtn.classList.remove(
+                    "translate-y-20",
+                    "opacity-0",
+                    "pointer-events-none",
+                  );
+                  backToTopBtn.classList.add(
+                    "translate-y-0",
+                    "opacity-100",
+                    "pointer-events-auto",
+                  );
+                } else {
+                  backToTopBtn.classList.remove(
+                    "translate-y-0",
+                    "opacity-100",
+                    "pointer-events-auto",
+                  );
+                  backToTopBtn.classList.add(
+                    "translate-y-20",
+                    "opacity-0",
+                    "pointer-events-none",
+                  );
+                }
+              }
+
+              isScrolling = false;
+            });
+            isScrolling = true;
+          }
+        },
+        { passive: true },
+      );
+
+      if (backToTopBtn) {
         backToTopBtn.addEventListener("click", () => {
           window.scrollTo({
             top: 0,

@@ -1,12 +1,15 @@
+---
+import { projects } from "../data/projects";
+---
+
 <section
   id="home"
-  class="relative min-h-screen flex items-center pt-32 overflow-hidden"
+  class="relative min-h-screen flex items-center pt-32 pb-20 overflow-hidden bg-white"
 >
-  <!-- Background Layers -->
-  <!-- Background Layers -->
-  <div class="absolute inset-0 -z-20 bg-white">
+  <!-- Minimalist Subtle Grid Background -->
+  <div class="absolute inset-0 -z-20">
     <div
-      class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:24px_24px]"
+      class="absolute inset-0 bg-[linear-gradient(to_right,#8080800a_1px,transparent_1px),linear-gradient(to_bottom,#8080800a_1px,transparent_1px)] bg-[size:32px_32px]"
     >
     </div>
     <div
@@ -15,297 +18,226 @@
     </div>
   </div>
 
-  <div class="absolute inset-0 -z-10 opacity-20">
+  <div class="absolute inset-0 -z-10 opacity-15">
     <div
-      class="absolute top-0 -left-4 w-96 h-96 bg-blue-primary/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob"
-    >
-    </div>
-    <div
-      class="absolute -bottom-8 right-20 w-96 h-96 bg-blue-secondary/15 rounded-full mix-blend-multiply filter blur-3xl animate-blob animation-delay-2000"
+      class="absolute top-10 left-10 w-96 h-96 bg-[radial-gradient(circle_at_center,rgba(37,99,235,0.3)_0%,transparent_70%)] rounded-full blur-2xl pointer-events-none"
     >
     </div>
   </div>
 
-  <!-- Floating Particles -->
-  <div class="absolute inset-0 -z-5 overflow-hidden">
-    <div class="particle particle-1"></div>
-    <div class="particle particle-2"></div>
-    <div class="particle particle-3"></div>
-  </div>
-
-  <!-- Main Content -->
+  <!-- Main Content Container -->
   <div class="container mx-auto px-4 relative z-10">
     <div
-      class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-20"
+      class="flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16"
     >
       <!-- Profile Photo - Left Column -->
       <div
-        class="relative group flex-shrink-0 lg:-mt-24"
+        class="relative group flex-shrink-0 lg:-mt-12"
         id="profile-container"
       >
-        <!-- Subtle Glow -->
-        <div class="absolute -inset-8 bg-blue-primary/10 rounded-full blur-3xl">
-        </div>
-
-        <!-- 3D Tilt Container -->
         <div class="relative" id="tilt-card">
-          <!-- Rotating Tech Ring -->
+          <!-- Outer Clean Card -->
           <div
-            class="absolute -inset-4 rounded-full border border-dashed border-blue-200 animate-spin-slow pointer-events-none"
+            class="relative w-64 h-64 md:w-80 md:h-80 rounded-3xl bg-gradient-to-br from-gray-100 to-gray-200 p-2 shadow-xl shadow-gray-900/5 border border-gray-200/80 transition-all duration-500 group-hover:shadow-2xl group-hover:border-blue-500/30"
           >
-          </div>
-
-          <!-- Outer Ring -->
-          <div
-            class="relative w-72 h-72 md:w-96 md:h-96 rounded-full bg-gradient-to-tr from-blue-primary to-blue-secondary p-1 shadow-2xl shadow-blue-900/10 transition-all duration-500 group-hover:scale-[1.02]"
-          >
-            <!-- Inner Glass Ring -->
+            <!-- Photo Frame -->
             <div
-              class="w-full h-full rounded-full bg-white/90 backdrop-blur-xl p-3 border-4 border-white/50"
+              class="w-full h-full rounded-2xl overflow-hidden bg-gray-900 relative"
             >
-              <!-- Photo Container -->
+              <img
+                src="/profile-photo.jpeg"
+                alt="Nafil Habibi Mulyadi"
+                class="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
+                onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
+              />
+              <!-- Fallback -->
               <div
-                class="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-gray-100 to-gray-200 relative"
+                class="absolute inset-0 hidden items-center justify-center bg-gray-950 text-white font-mono"
               >
-                <img
-                  src="/profile-photo.jpeg"
-                  alt="Nafil Habibi Mulyadi"
-                  class="w-full h-full object-cover"
-                  onerror="this.style.display='none'; this.nextElementSibling.style.display='flex'"
-                />
-                <!-- Fallback -->
-                <div
-                  class="absolute inset-0 hidden items-center justify-center bg-gradient-to-br from-blue-primary to-blue-secondary"
+                <span class="text-6xl font-black text-blue-500 tracking-tighter"
+                  >NHM</span
                 >
-                  <span
-                    class="text-8xl md:text-9xl font-black text-white tracking-tighter"
-                    >NHM</span
-                  >
-                </div>
-                <!-- Hover Overlay -->
-                <div
-                  class="absolute inset-0 bg-gradient-to-t from-blue-primary/40 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-                >
-                </div>
               </div>
             </div>
-
-            <!-- Accent Dots -->
-            <div
-              class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2 w-4 h-4 bg-blue-primary rounded-full shadow-md shadow-blue-primary/30"
-            >
-            </div>
-            <div
-              class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2 w-4 h-4 bg-blue-secondary rounded-full shadow-md shadow-blue-secondary/30"
-            >
-            </div>
-          </div>
-
-          <!-- Floating Icons -->
-          <div
-            class="absolute -top-8 -right-8 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-blue-100 flex items-center justify-center rotate-12 hover:rotate-0 transition-transform duration-300 animate-float"
-          >
-            <i class="fas fa-code text-2xl text-blue-primary"></i>
-          </div>
-          <div
-            class="absolute -bottom-8 -left-8 w-16 h-16 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-green-100 flex items-center justify-center -rotate-12 hover:rotate-0 transition-transform duration-300 animate-float"
-            style="animation-delay: 1s"
-          >
-            <i class="fas fa-palette text-2xl text-green-primary"></i>
-          </div>
-          <div
-            class="absolute top-1/2 -right-12 w-14 h-14 bg-white/90 backdrop-blur-md rounded-2xl shadow-xl border border-blue-100 flex items-center justify-center rotate-6 hover:rotate-0 transition-transform duration-300 animate-float"
-            style="animation-delay: 0.5s"
-          >
-            <i class="fas fa-rocket text-xl text-accent"></i>
           </div>
         </div>
       </div>
 
       <!-- Content - Right Column -->
       <div class="flex-1 max-w-2xl text-center lg:text-left">
-        <!-- Status Badge -->
+        <!-- Terminal Style Status Badge -->
         <div
-          class="inline-flex items-center space-x-2 mb-6 px-6 py-3 rounded-full bg-white/80 backdrop-blur-md border-2 border-blue-200 shadow-lg hover:shadow-xl transition-all duration-300 group cursor-default animate-fade-in-up"
+          class="inline-flex items-center gap-2.5 px-3.5 py-1.5 rounded-lg bg-slate-900 border border-blue-500/30 font-mono text-xs text-blue-400 shadow-sm shadow-blue-500/10 mb-6 cursor-default animate-fade-in-up"
           style="animation-delay: 0.1s"
         >
-          <div
-            class="w-3 h-3 bg-green-500 rounded-full animate-pulse shadow-lg shadow-green-500/50"
-          >
-          </div>
+          <span class="text-blue-500/60 font-bold">[</span>
+
           <span
-            class="text-dark font-bold text-sm md:text-base"
-            data-i18n="hero.status">Available for new projects</span
+            class="tracking-widest font-semibold uppercase"
+            data-i18n="hero.status">This Area Build With Astro</span
           >
-          <i class="fas fa-sparkles text-green-primary group-hover:animate-spin"
-          ></i>
+          <span class="text-blue-500/60 font-bold">]</span>
         </div>
 
-        <!-- Name & Title -->
-        <div class="mb-8 animate-fade-in-up" style="animation-delay: 0.2s">
-          <h1
-            class="text-4xl md:text-6xl lg:text-7xl font-black mb-2 tracking-tighter leading-none"
-          >
-            <span
-              class="text-transparent bg-clip-text bg-gradient-to-r from-blue-500 to-blue-400"
-              >Nafil Habibi</span
-            ><br />
-            <span class="text-dark opacity-90">Mulyadi</span>
-          </h1>
+        <!-- Name & Role -->
+        <div class="mb-6 animate-fade-in-up" style="animation-delay: 0.2s">
           <div
-            class="flex items-center gap-4 justify-center lg:justify-start mt-4"
+            class="inline-block px-5 py-3.5 md:px-7 md:py-4 rounded-2xl bg-gray-950 border border-gray-800 text-white shadow-xl mb-3"
           >
-            <div class="h-1 w-12 bg-green-primary rounded-full"></div>
+            <h1
+              class="text-3xl md:text-5xl lg:text-6xl font-black tracking-tight leading-none text-white"
+            >
+              Nafil Habibi <span class="text-gray-400 font-bold">Mulyadi</span>
+            </h1>
+          </div>
+          <div
+            class="flex items-center gap-3 justify-center lg:justify-start mt-2"
+          >
+            <span class="font-mono text-gray-400 text-sm font-semibold">//</span
+            >
             <h2
-              class="text-xl md:text-2xl font-bold text-gray-400 uppercase tracking-[0.2em]"
+              class="text-lg md:text-xl font-bold text-gray-500 uppercase tracking-[0.15em] font-mono"
               data-i18n="hero.role"
             >
-              Fullstack <span class="text-black">Engineer</span>
+              System Analyst
             </h2>
           </div>
         </div>
 
         <!-- Description -->
         <p
-          class="text-gray-text text-base md:text-lg mb-10 max-w-xl leading-relaxed animate-fade-in-up"
+          class="text-gray-600 text-base md:text-lg mb-8 max-w-xl leading-relaxed animate-fade-in-up font-normal"
           style="animation-delay: 0.3s"
           data-i18n="hero.desc"
         >
-          I architect high-performance digital solutions by bridging the gap
-          between innovative design and scalable engineering.
+          Architecting high-performance digital solutions by bridging innovative
+          UI/UX design with robust, scalable software engineering.
         </p>
 
         <!-- CTA Buttons -->
         <div
-          class="flex flex-wrap justify-center lg:justify-start gap-5 mb-10 animate-fade-in-up"
+          class="flex flex-wrap justify-center lg:justify-start gap-4 mb-10 animate-fade-in-up"
           style="animation-delay: 0.4s"
         >
           <a
-            href="#projects"
-            class="group px-8 py-4 bg-blue-primary text-white rounded-2xl font-bold shadow-xl shadow-blue-900/20 hover:bg-blue-secondary transition-all duration-300 transform hover:-translate-y-2 inline-flex items-center gap-3"
+            href="/projects"
+            class="group px-7 py-3.5 bg-gray-900 hover:bg-blue-600 text-white rounded-xl font-semibold shadow-md hover:shadow-lg transition-all duration-300 inline-flex items-center gap-2.5 font-mono text-sm"
           >
             <span data-i18n="hero.portfolio">View Portfolio</span>
             <i
-              class="fas fa-arrow-right text-sm group-hover:translate-x-1 transition-transform"
+              class="fas fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"
             ></i>
           </a>
           <a
-            href="/resume.pdf"
-            class="group px-8 py-4 bg-white/90 backdrop-blur-md border-2 border-gray-300 text-gray-700 rounded-2xl font-bold hover:border-blue-secondary hover:text-blue-secondary shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-2 inline-flex items-center gap-3"
+            href="/Nafil_Habibi_Mulyadi_CV.pdf"
+            class="group px-7 py-3.5 bg-white border border-gray-300 text-gray-800 rounded-xl font-semibold hover:border-gray-900 shadow-sm hover:shadow-md transition-all duration-300 inline-flex items-center gap-2.5 font-mono text-sm"
           >
             <span data-i18n="hero.cv">Download CV</span>
             <i
-              class="fas fa-download text-sm group-hover:translate-y-1 transition-transform"
+              class="fas fa-download text-xs group-hover:translate-y-0.5 transition-transform"
             ></i>
           </a>
         </div>
 
-        <div class="animate-fade-in-up" style="animation-delay: 0.6s">
+        <!-- Tech Stack Tags -->
+        <div class="animate-fade-in-up mb-10" style="animation-delay: 0.5s">
           <p
-            class="text-gray-400 font-semibold text-sm uppercase tracking-widest mb-6"
+            class="text-gray-400 font-mono text-xs uppercase tracking-widest mb-3"
             data-i18n="hero.tech"
           >
-            Tech Stack
+            // CORE TECH STACK
           </p>
-          <div class="flex flex-wrap justify-center lg:justify-start gap-4">
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fab fa-react mr-2 text-blue-500 group-hover:scale-125 transition-transform inline-block"
-              ></i>React
-            </span>
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fas fa-rocket mr-2 text-blue-600 group-hover:scale-125 transition-transform inline-block"
-              ></i>Astro
-            </span>
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fab fa-node-js mr-2 text-blue-700 group-hover:scale-125 transition-transform inline-block"
-              ></i>Node.js
-            </span>
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fas fa-wind mr-2 text-blue-400 group-hover:scale-125 transition-transform inline-block"
-              ></i>Tailwind
-            </span>
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fab fa-python mr-2 text-blue-800 group-hover:scale-125 transition-transform inline-block"
-              ></i>Python
-            </span>
-            <span
-              class="px-6 py-3 bg-white/90 backdrop-blur-md border border-blue-100 rounded-xl text-sm font-bold text-gray-700 hover:border-blue-primary hover:text-blue-primary hover:shadow-lg hover:-translate-y-1 transition-all cursor-default group"
-            >
-              <i
-                class="fab fa-laravel mr-2 text-red-500 group-hover:scale-125 transition-transform inline-block"
-              ></i>Laravel
-            </span>
+          <div class="flex flex-wrap justify-center lg:justify-start gap-2.5">
+            {
+              [
+                { name: "React", icon: "fab fa-react", color: "text-sky-500" },
+                {
+                  name: "Astro",
+                  icon: "fas fa-rocket",
+                  color: "text-orange-500",
+                },
+                {
+                  name: "Node.js",
+                  icon: "fab fa-node-js",
+                  color: "text-emerald-600",
+                },
+                {
+                  name: "Tailwind",
+                  icon: "fas fa-wind",
+                  color: "text-cyan-500",
+                },
+                {
+                  name: "Python",
+                  icon: "fab fa-python",
+                  color: "text-blue-500",
+                },
+                {
+                  name: "Laravel",
+                  icon: "fab fa-laravel",
+                  color: "text-red-500",
+                },
+              ].map((tech) => (
+                <span class="inline-flex items-center gap-2 px-3.5 py-1.5 bg-gray-50 border border-gray-200/80 rounded-lg text-xs font-mono text-gray-700 hover:bg-white hover:border-gray-400 transition-all cursor-default shadow-sm">
+                  <i class={`${tech.icon} ${tech.color}`} />
+                  {tech.name}
+                </span>
+              ))
+            }
           </div>
         </div>
-        <!-- Stats - Minimalist -->
+
+        <!-- Minimalist Stats -->
         <div
-          class="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12 animate-fade-in-up"
-          style="animation-delay: 0.5s"
+          class="grid grid-cols-2 md:grid-cols-4 gap-4 pt-6 border-t border-gray-100 animate-fade-in-up"
+          style="animation-delay: 0.6s"
         >
-          <div
-            class="p-4 rounded-2xl hover:bg-blue-50/50 transition-colors duration-300"
-          >
-            <div class="text-3xl md:text-4xl font-black text-blue-primary mb-1">
-              27+
+          <div>
+            <div
+              class="text-2xl md:text-3xl font-black text-gray-900 font-mono"
+            >
+              {projects.length}
             </div>
             <div
-              class="text-gray-500 font-bold text-[10px] uppercase tracking-widest"
+              class="text-gray-400 font-mono text-[11px] uppercase tracking-wider mt-0.5"
               data-i18n="hero.stats.projects"
             >
               Projects
             </div>
           </div>
-          <div
-            class="p-4 rounded-2xl hover:bg-green-50/50 transition-colors duration-300"
-          >
+          <div>
             <div
-              class="text-3xl md:text-4xl font-black text-green-primary mb-1"
+              class="text-2xl md:text-3xl font-black text-gray-900 font-mono"
             >
               4+
             </div>
             <div
-              class="text-gray-500 font-bold text-[10px] uppercase tracking-widest"
+              class="text-gray-400 font-mono text-[11px] uppercase tracking-wider mt-0.5"
               data-i18n="hero.stats.exp"
             >
               Years Exp
             </div>
           </div>
-          <div
-            class="p-4 rounded-2xl hover:bg-blue-50/50 transition-colors duration-300"
-          >
-            <div class="text-3xl md:text-4xl font-black text-blue-primary mb-1">
+          <div>
+            <div
+              class="text-2xl md:text-3xl font-black text-gray-900 font-mono"
+            >
               100%
             </div>
             <div
-              class="text-gray-500 font-bold text-[10px] uppercase tracking-widest"
+              class="text-gray-400 font-mono text-[11px] uppercase tracking-wider mt-0.5"
               data-i18n="hero.stats.satisfaction"
             >
               Satisfaction
             </div>
           </div>
-          <div
-            class="p-4 rounded-2xl hover:bg-blue-50/50 transition-colors duration-300"
-          >
-            <div class="text-3xl md:text-4xl font-black text-blue-primary mb-1">
+          <div>
+            <div
+              class="text-2xl md:text-3xl font-black text-gray-900 font-mono"
+            >
               24/7
             </div>
             <div
-              class="text-gray-500 font-bold text-[10px] uppercase tracking-widest"
+              class="text-gray-400 font-mono text-[11px] uppercase tracking-wider mt-0.5"
               data-i18n="hero.stats.support"
             >
               Support
@@ -318,74 +250,6 @@
 </section>
 
 <style>
-  /* Blob Animation */
-  @keyframes blob {
-    0%,
-    100% {
-      transform: translate(0, 0) scale(1);
-    }
-    25% {
-      transform: translate(20px, -50px) scale(1.1);
-    }
-    50% {
-      transform: translate(-20px, 20px) scale(0.9);
-    }
-    75% {
-      transform: translate(50px, 50px) scale(1.05);
-    }
-  }
-  .animate-blob {
-    animation: blob 7s infinite;
-  }
-  .animation-delay-2000 {
-    animation-delay: 2s;
-  }
-
-  /* Floating Particles */
-  .particle {
-    position: absolute;
-    border-radius: 50%;
-    pointer-events: none;
-  }
-  .particle-1 {
-    width: 8px;
-    height: 8px;
-    background: rgba(22, 78, 99, 0.4);
-    top: 20%;
-    left: 10%;
-    animation: float-particle 6s infinite ease-in-out;
-  }
-  .particle-2 {
-    width: 12px;
-    height: 12px;
-    background: rgba(8, 145, 178, 0.3);
-    top: 60%;
-    left: 80%;
-    animation: float-particle 8s infinite ease-in-out 1s;
-  }
-  .particle-3 {
-    width: 6px;
-    height: 6px;
-    background: rgba(34, 211, 238, 0.5);
-    top: 40%;
-    left: 20%;
-    animation: float-particle 7s infinite ease-in-out 2s;
-  }
-  @keyframes float-particle {
-    0%,
-    100% {
-      transform: translate(0, 0);
-      opacity: 0;
-    }
-    10%,
-    90% {
-      opacity: 0.8;
-    }
-    50% {
-      transform: translate(50px, -50px);
-    }
-  }
-
   /* 3D Tilt */
   #tilt-card {
     will-change: transform;
@@ -396,7 +260,7 @@
   @keyframes fade-in-up {
     from {
       opacity: 0;
-      transform: translateY(20px);
+      transform: translateY(16px);
     }
     to {
       opacity: 1;
@@ -404,62 +268,45 @@
     }
   }
   .animate-fade-in-up {
-    animation: fade-in-up 0.6s ease-out forwards;
+    animation: fade-in-up 0.5s ease-out forwards;
   }
 </style>
 
 <script lang="ts">
-  // 3D Tilt Effect
+  // Subtle 3D Tilt Effect for Profile Photo
   document.addEventListener("DOMContentLoaded", () => {
     const tiltCard = document.getElementById("tilt-card");
     const profileContainer = document.getElementById("profile-container");
 
     if (profileContainer && tiltCard) {
-      profileContainer.addEventListener("mousemove", (e) => {
-        const rect = profileContainer.getBoundingClientRect();
-        const x = e.clientX - rect.left;
-        const y = e.clientY - rect.top;
-        const centerX = rect.width / 2;
-        const centerY = rect.height / 2;
-        const rotateX = (y - centerY) / 10;
-        const rotateY = (centerX - x) / 10;
+      let isTicking = false;
 
-        tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.05, 1.05, 1.05)`;
-      });
+      profileContainer.addEventListener(
+        "mousemove",
+        (e) => {
+          if (!isTicking) {
+            window.requestAnimationFrame(() => {
+              const rect = profileContainer.getBoundingClientRect();
+              const x = e.clientX - rect.left;
+              const y = e.clientY - rect.top;
+              const centerX = rect.width / 2;
+              const centerY = rect.height / 2;
+              const rotateX = (y - centerY) / 12;
+              const rotateY = (centerX - x) / 12;
+
+              tiltCard.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale3d(1.02, 1.02, 1.02)`;
+              isTicking = false;
+            });
+            isTicking = true;
+          }
+        },
+        { passive: true },
+      );
 
       profileContainer.addEventListener("mouseleave", () => {
         tiltCard.style.transform =
           "perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1)";
       });
-    }
-
-    // Optimized Parallax (desktop only)
-    const isMobile =
-      /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
-        navigator.userAgent,
-      ) || window.innerWidth < 768;
-
-    if (!isMobile) {
-      let ticking = false;
-      const particles = document.querySelectorAll(".particle");
-
-      window.addEventListener(
-        "scroll",
-        () => {
-          if (!ticking) {
-            requestAnimationFrame(() => {
-              const scrolled = window.pageYOffset;
-              particles.forEach((el, index) => {
-                const speed = (index + 1) * 0.4;
-                el.style.transform = `translateY(${scrolled * speed}px)`;
-              });
-              ticking = false;
-            });
-            ticking = true;
-          }
-        },
-        { passive: true },
-      );
     }
   });
 </script>
