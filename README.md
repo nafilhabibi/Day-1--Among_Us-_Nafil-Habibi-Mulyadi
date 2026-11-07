@@ -6,8 +6,8 @@
 
 <br>
 
-<a href="https://github.com/YOUR_USERNAME">
-  <img src="https://img.shields.io/github/followers/YOUR_USERNAME?label=Follow&style=social"/>
+<a href="https://github.com/nafilhabibi">
+  <img src="https://img.shields.io/github/followers/nafilhabibi?label=Follow&style=social"/>
 </a>
 <a href="#">
   <img src="https://img.shields.io/badge/Location-Indonesia-E11D48?style=flat-square"/>
@@ -29,8 +29,8 @@
 ## 🧑‍💻 About Me
 
 ```yaml
-name: "Nafil Habibi"
-role: "Full Stack Developer & DevOps Engineer"
+name: "Nafil Habibi Mulyadi"
+role: "Full Stack Engineer & System Analyst"
 focus: ["Backend Systems", "Mobile Apps", "Infrastructure Automation"]
 currently_exploring: ["Docker", "Kubernetes", "GitHub Actions", "AI Automation", "Computer Vision"]
 philosophy: "Build. Automate. Deploy."
@@ -118,12 +118,12 @@ philosophy: "Build. Automate. Deploy."
 
 <div align="center">
 
-<img src="https://github-readme-stats.vercel.app/api?username=YOUR_USERNAME&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" width="49%"/>
-<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=YOUR_USERNAME&layout=compact&theme=radical&hide_border=true" width="35%"/>
+<img src="https://github-readme-stats.vercel.app/api?username=nafilhabibi&show_icons=true&theme=radical&hide_border=true&count_private=true&include_all_commits=true" width="49%"/>
+<img src="https://github-readme-stats.vercel.app/api/top-langs/?username=nafilhabibi&layout=compact&theme=radical&hide_border=true" width="35%"/>
 
 <br>
 
-<img src="https://github-readme-streak-stats.herokuapp.com/?user=YOUR_USERNAME&theme=radical&hide_border=true" width="60%"/>
+<img src="https://github-readme-streak-stats.herokuapp.com/?user=nafilhabibi&theme=radical&hide_border=true" width="60%"/>
 
 </div>
 
@@ -132,7 +132,7 @@ philosophy: "Build. Automate. Deploy."
 ## 🏆 Trophies
 
 <div align="center">
-<img src="https://github-profile-trophy.vercel.app/?username=YOUR_USERNAME&theme=radical&no-frame=true&row=1&column=6"/>
+<img src="https://github-profile-trophy.vercel.app/?username=nafilhabibi&theme=radical&no-frame=true&row=1&column=6"/>
 </div>
 
 <br>
@@ -140,7 +140,7 @@ philosophy: "Build. Automate. Deploy."
 ## 📈 Contribution Graph
 
 <div align="center">
-<img src="https://github-readme-activity-graph.vercel.app/graph?username=YOUR_USERNAME&theme=redical&hide_border=true"/>
+<img src="https://github-readme-activity-graph.vercel.app/graph?username=nafilhabibi&theme=redical&hide_border=true"/>
 </div>
 
 <br>
@@ -149,16 +149,16 @@ philosophy: "Build. Automate. Deploy."
 
 <div align="center">
 
-<a href="https://github.com/YOUR_USERNAME">
+<a href="https://github.com/nafilhabibi">
   <img src="https://img.shields.io/badge/GitHub-181717?style=for-the-badge&logo=github&logoColor=white"/>
 </a>
-<a href="https://linkedin.com/in/YOUR_LINKEDIN">
+<a href="https://linkedin.com/in/nafilhabibi">
   <img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white"/>
 </a>
-<a href="mailto:YOUR_EMAIL@example.com">
+<a href="mailto:nafilhabibi07@gmail.com">
   <img src="https://img.shields.io/badge/Email-E11D48?style=for-the-badge&logo=gmail&logoColor=white"/>
 </a>
-<a href="https://instagram.com/YOUR_INSTAGRAM">
+<a href="https://instagram.com/nafiliator_">
   <img src="https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white"/>
 </a>
 
