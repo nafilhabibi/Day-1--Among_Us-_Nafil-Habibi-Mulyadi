@@ -1,14 +1,11 @@
-# 🚀 Git & GitHub Workshop
+# 🚀 Git & GitHub AI Workshop
 
-<p align="center">
-  <img src="https://capsule-render.vercel.app/api?type=venom&color=0:E11D48,100:312E81&height=180&section=header&text=Git%20%26%20GitHub&fontSize=48&fontColor=ffffff&animation=fadeIn&fontAlignY=50" width="100%" />
-</p>
 
 <p align="center">
   <b>Workshop Documentation & Learning Notes</b>
-  **Nama:** Nafil Habibi Mulyadi
-  **NIM :** 2607421011
-  **Kelas :** TMJ 1B
+  Nama: Nafil Habibi Mulyadi
+  NIM : 2607421011
+  Kelas : TMJ 1B
 </p>
 
 <p align="center">
